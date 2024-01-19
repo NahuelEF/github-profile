@@ -15,15 +15,13 @@ module.exports = {
     'prettier/prettier': [
       'warn',
       {
+        printWidth: 120,
         semi: true,
         singleQuote: true,
         endOfLine: 'crlf',
       },
     ],
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
   },
 };
 

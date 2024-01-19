@@ -1,19 +1,10 @@
 {
-  "printWidth": 80,
+  "printWidth": 120,
   "semi": true,
   "singleQuote": true,
   "endOfLine": "crlf",
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss"
-  ],
-  "importOrder": [
-    "^react$",
-    "<THIRD_PARTY_MODULES>",
-    "^(?!.*[.]css$)[./].*$",
-    ".css$",
-    "^[./]"
-  ],
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  "importOrder": ["^react$", "<THIRD_PARTY_MODULES>", "^(?!.*[.]css$)[./].*$", ".css$", "^[./]"],
   "importOrderSortSpecifiers": true,
   "importOrderCaseInsensitive": true
 }
