@@ -10,6 +10,9 @@ export default {
       fontFamily: {
         sans: ['"Be Vietnam Pro"', ...defaultTheme.fontFamily.sans],
       },
+      gridTemplateColumns: {
+        'auto-fill': 'repeat(auto-fill, minmax(min(430px, 100%), 1fr))',
+      },
     },
     colors: {
       'lightest-blue': '#CDD5E0',
