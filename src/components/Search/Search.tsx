@@ -1,18 +1,27 @@
 import { useState } from 'react';
 import { SearchSvg } from '@/assets/icons';
 
-export const Search = () => {
+interface SearchProps {
+  onSearch: (name: string) => void;
+}
+
+export const Search = ({ onSearch }: SearchProps) => {
   const [userName, setUserName] = useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => setUserName(event.target.value);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
-    console.log(userName);
+    if (userName.trim() !== '') {
+      onSearch(userName);
+    }
   };
 
   return (
-    <form className="mt-8 w-full max-w-md overflow-hidden rounded-2xl bg-dark-grayish-blue" onSubmit={handleSubmit}>
+    <form
+      className="mt-8 w-full max-w-lg overflow-hidden rounded-2xl bg-dark-grayish-blue focus-within:outline focus-within:outline-2 focus-within:outline-light-blue"
+      onSubmit={handleSubmit}
+    >
       <label className="flex w-full items-center  p-4">
         <i className="inline-block size-6">
           <SearchSvg />
@@ -22,6 +31,7 @@ export const Search = () => {
           name="username"
           type="search"
           placeholder="username"
+          autoComplete="nickname"
           value={userName}
           onChange={handleChange}
         />
