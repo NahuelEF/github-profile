@@ -1,4 +1,4 @@
-# :octocat: GitHub Profile
+# 👤 GitHub Profile
 
 This is a solution to the [GitHub Profile challenge on devChallenges](https://devchallenges.io/challenge/42). devChallenges help you improve your coding skills by building realistic projects.
 
